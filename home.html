@@ -22,7 +22,7 @@
     <div class="navbar shadow-sm">
       <div class="flex w-2/4 justify-between mx-auto">
         <div class="logo flex">
-          <a class="btn btn-ghost text-xl"
+          <a class="cursor-pointer"
             ><img src="./assets/group.png" alt="" class="w-12"
           /></a>
           <div class="logo-content">
@@ -45,43 +45,43 @@
       </p>
       <div class="grid grid-cols-3 grid-rows-2 gap-5 mt-10">
         <button
-          class="border border-solid border-neutral-500 p-5 rounded-xl cursor-pointer hover:border-[#0874F2] hover:text-[#0874F2] hover:font-bold flex flex-col justify-center items-center"
+          class="border border-solid border-neutral-500 p-5 rounded-xl cursor-pointer hover:border-[#0874F2] hover:text-[#0874F2] hover:font-bold flex flex-col justify-center items-center btns"
           id="add-money-btn"
         >
           <img src="./assets/wallet1.png" alt="" />
           Add Money
         </button>
         <button
-          class="border border-solid border-neutral-500 p-5 rounded-xl cursor-pointer hover:border-[#0874F2] hover:text-[#0874F2] hover:font-bold flex flex-col justify-center items-center"
+          class="border border-solid border-neutral-500 p-5 rounded-xl cursor-pointer hover:border-[#0874F2] hover:text-[#0874F2] hover:font-bold flex flex-col justify-center items-center btns"
           id="cashout-btn"
         >
           <img src="./assets/send1.png" alt="" />
           Cashout
         </button>
         <button
-          class="border border-solid border-neutral-500 p-5 rounded-xl cursor-pointer hover:border-[#0874F2] hover:text-[#0874F2] hover:font-bold flex flex-col justify-center items-center"
+          class="border border-solid border-neutral-500 p-5 rounded-xl cursor-pointer hover:border-[#0874F2] hover:text-[#0874F2] hover:font-bold flex flex-col justify-center items-center btns"
           id="transfer-money-btn"
         >
           <img src="./assets/money1.png" alt="" />
           Transfer Money
         </button>
         <button
-          class="border border-solid border-neutral-500 p-5 rounded-xl cursor-pointer hover:border-[#0874F2] hover:text-[#0874F2] hover:font-bold flex flex-col justify-center items-center"
+          class="border border-solid border-neutral-500 p-5 rounded-xl cursor-pointer hover:border-[#0874F2] hover:text-[#0874F2] hover:font-bold flex flex-col justify-center items-center btns"
           id="get-bonus-btn"
         >
           <img src="./assets/bonus1.png" alt="" />
           Get Bonus
         </button>
         <button
-          class="border border-solid border-neutral-500 p-5 rounded-xl cursor-pointer hover:border-[#0874F2] hover:text-[#0874F2] hover:font-bold flex flex-col justify-center items-center"
+          class="border border-solid border-neutral-500 p-5 rounded-xl cursor-pointer hover:border-[#0874F2] hover:text-[#0874F2] hover:font-bold flex flex-col justify-center items-center btns"
           id="pay-bill-btn"
         >
           <img src="./assets/purse1.png" alt="" />
           Pay Bill
         </button>
         <button
-          class="border border-solid border-neutral-500 p-5 rounded-xl cursor-pointer hover:border-[#0874F2] hover:text-[#0874F2] hover:font-bold flex flex-col justify-center items-center"
-          id="transaction-btn"
+          class="border border-solid border-neutral-500 p-5 rounded-xl cursor-pointer hover:border-[#0874F2] hover:text-[#0874F2] hover:font-bold flex flex-col justify-center items-center btns"
+          id="transactions-btn"
         >
           <img src="./assets/transaction1.png" alt="" />
           Transactions
@@ -90,7 +90,7 @@
     </section>
 
     <!-- Add Money Section -->
-    <section class="w-2/4 mx-auto p-5 hidden" id="add-money-section">
+    <section class="w-2/4 mx-auto p-5 forms" id="add-money-section">
       <h2 class="text-xl font-bold">Add Money</h2>
       <form
         action=""
@@ -136,7 +136,7 @@
     </section>
 
     <!-- Cashout Section -->
-    <section class="w-2/4 mx-auto p-5 hidden" id="cashout-section">
+    <section class="w-2/4 mx-auto p-5 forms" id="cashout-section">
       <h2 class="text-xl font-bold">Cashout</h2>
       <form
         action=""
@@ -172,6 +172,25 @@
       </form>
     </section>
 
+    <!-- Transfer Money Section -->
+    <section class="w-2/4 mx-auto p-5 forms" id="transfer-money-section">
+      <h2 class="text-xl font-bold">Transfer Money</h2>
+    </section>
+
+    <!-- Get Bonus Section -->
+    <section class="w-2/4 mx-auto p-5 forms" id="get-bonus-section">
+      <h2 class="text-xl font-bold">Get Bonus</h2>
+    </section>
+
+    <!-- Pay Bill Section -->
+    <section class="w-2/4 mx-auto p-5 forms" id="pay-bill-section">
+      <h2 class="text-xl font-bold">Pay Bill</h2>
+    </section>
+
+    <!-- Transactions Section -->
+    <section class="w-2/4 mx-auto p-5 forms" id="transactions-section">
+      <h2 class="text-xl font-bold">Transactions</h2>
+    </section>
     <!-- script link -->
     <script src="./home.js"></script>
   </body>
