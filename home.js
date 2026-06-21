@@ -115,6 +115,10 @@ document.getElementById("add-btn").addEventListener("click", function (e) {
   const bankNumber = getInputValue("bank-number");
   const amount = getInputValueNumber("amount-number");
   let balance = getInnerTextNumber("main-balance");
+  if (amount <= 0) {
+    alert("Invalid Amount");
+    return;
+  }
   if (bankNumber.length < 11) {
     alert("Invalid Bank Number!");
     return;
@@ -142,6 +146,10 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
   const amount = getInputValueNumber("withdraw-amount-number");
 
   let balance = getInnerTextNumber("main-balance");
+  if (amount <= 0 || amount > balance) {
+    alert("Invalid Amount");
+    return;
+  }
   if (agentNumber.length < 11) {
     alert("Invalid Agent Number!");
     return;

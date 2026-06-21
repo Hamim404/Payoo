@@ -47,7 +47,7 @@
       </p>
       <div class="grid grid-cols-3 grid-rows-2 gap-5 mt-10">
         <button
-          class="border border-solid border-neutral-500 p-5 rounded-xl cursor-pointer hover:border-[#0874F2] hover:text-[#0874F2] hover:font-bold flex flex-col justify-center items-center btns"
+          class="border border-solid border-sky-500 text-sky-500 p-5 rounded-xl cursor-pointer hover:border-[#0874F2] hover:text-[#0874F2] hover:font-bold flex flex-col justify-center items-center btns"
           id="add-money-btn"
         >
           <img src="./assets/wallet1.png" alt="" />
@@ -113,6 +113,7 @@
           placeholder="Enter 11 digit account number"
           class="input input-ghost bg-[#F4F5F7] border-none outline-none rounded-xl w-full"
           id="bank-number"
+          required
         />
         <label for="">Amount to Add</label>
         <input
@@ -120,6 +121,7 @@
           placeholder="Add amount to withdraw"
           class="input input-ghost bg-[#F4F5F7] border-none outline-none rounded-xl w-full"
           id="amount-number"
+          required
         />
         <label for="">Pin Number</label>
         <input
@@ -127,6 +129,7 @@
           placeholder="Enter 4 digit pin number"
           class="input input-ghost bg-[#F4F5F7] border-none outline-none rounded-xl w-full"
           id="pin-number"
+          required
         />
         <input
           type="submit"
@@ -138,7 +141,7 @@
     </section>
 
     <!-- Cashout Section -->
-    <section class="w-2/4 mx-auto p-5 forms" id="cashout-section">
+    <section class="w-2/4 mx-auto p-5 forms hidden" id="cashout-section">
       <h2 class="text-xl font-bold">Cash Out</h2>
       <form
         action=""
@@ -150,6 +153,7 @@
           placeholder="Enter 11 digit number"
           class="input input-ghost bg-[#F4F5F7] border-none outline-none rounded-xl w-full"
           id="agent-number"
+          required
         />
         <label for="">Amount</label>
         <input
@@ -157,6 +161,7 @@
           placeholder="Enter amount to withdraw"
           class="input input-ghost bg-[#F4F5F7] border-none outline-none rounded-xl w-full"
           id="withdraw-amount-number"
+          required
         />
         <label for="">Pin Number</label>
         <input
@@ -164,6 +169,7 @@
           placeholder="Enter 4 digit pin number"
           class="input input-ghost bg-[#F4F5F7] border-none outline-none rounded-xl w-full"
           id="withdraw-pin-number"
+          required
         />
         <input
           type="submit"
@@ -175,22 +181,22 @@
     </section>
 
     <!-- Transfer Money Section -->
-    <section class="w-2/4 mx-auto p-5 forms" id="transfer-money-section">
+    <section class="w-2/4 mx-auto p-5 forms hidden" id="transfer-money-section">
       <h2 class="text-xl font-bold">Transfer Money</h2>
     </section>
 
     <!-- Get Bonus Section -->
-    <section class="w-2/4 mx-auto p-5 forms" id="get-bonus-section">
+    <section class="w-2/4 mx-auto p-5 forms hidden" id="get-bonus-section">
       <h2 class="text-xl font-bold">Get Bonus</h2>
     </section>
 
     <!-- Pay Bill Section -->
-    <section class="w-2/4 mx-auto p-5 forms" id="pay-bill-section">
+    <section class="w-2/4 mx-auto p-5 forms hidden" id="pay-bill-section">
       <h2 class="text-xl font-bold">Pay Bill</h2>
     </section>
 
     <!-- Transactions Section -->
-    <section class="w-2/4 mx-auto p-5 forms" id="transactions-section">
+    <section class="w-2/4 mx-auto p-5 forms hidden" id="transactions-section">
       <div class="flex justify-between items-center">
         <h2 class="text-xl font-bold">Transactions</h2>
         <p class="text-neutral-500">View All</p>
