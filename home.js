@@ -40,7 +40,7 @@ const getBonusSection = document.getElementById("get-bonus-section");
 const payBillSection = document.getElementById("pay-bill-section");
 const transactionsSection = document.getElementById("transactions-section");
 
-const transactionsForm = [];
+const transactionsData = [];
 
 // Toggling Feature
 // add-money
@@ -130,8 +130,7 @@ document.getElementById("add-btn").addEventListener("click", function (e) {
     name: "Add Money",
     date: new Date().toLocaleTimeString(),
   };
-  transactionsForm.push(data);
-  console.log(transactionsForm);
+  transactionsData.push(data);
 });
 
 // Cashout Function
@@ -158,9 +157,36 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
     name: "Cash Out",
     date: new Date().toLocaleTimeString(),
   };
-  transactionsForm.push(data);
-  console.log(transactionsForm);
+  transactionsData.push(data);
 });
 
-
 // Transactions Function
+
+document
+  .getElementById("transactions-btn")
+  .addEventListener("click", function () {
+    const transactionsContainer = document.getElementById(
+      "transactions-container",
+    );
+    transactionsContainer.innerText = "";
+    for (const data of transactionsData) {
+      const newElement = document.createElement("div");
+      newElement.innerHTML = `
+      <div class="flex justify-between items-center w-full bg-white rounded-lg p-5">
+        <div class="flex items-center gap-3">
+          <div>
+            <img src="./assets/send1.png" alt="" class="w-full"/>
+          </div>
+          <div>
+            <h5 class="text-lg text-gray-700 font-bold" id="transactions-title">${data.name}</h5>
+            <p class="text-gray-500">Today <span id="transactions-time">${data.date}</span></p>
+          </div>
+        </div>
+        <div>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </div>
+      `;
+      transactionsContainer.appendChild(newElement);
+    }
+  });
