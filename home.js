@@ -40,6 +40,8 @@ const getBonusSection = document.getElementById("get-bonus-section");
 const payBillSection = document.getElementById("pay-bill-section");
 const transactionsSection = document.getElementById("transactions-section");
 
+const transactionsForm = [];
+
 // Toggling Feature
 // add-money
 document
@@ -124,9 +126,15 @@ document.getElementById("add-btn").addEventListener("click", function (e) {
 
   balance = balance + amount;
   setInnerText(balance);
+  const data = {
+    name: "Add Money",
+    date: new Date().toLocaleTimeString(),
+  };
+  transactionsForm.push(data);
+  console.log(transactionsForm);
 });
 
-// Withdraw Money Function
+// Cashout Function
 document.getElementById("withdraw-btn").addEventListener("click", function (e) {
   e.preventDefault();
   const pin = 5959;
@@ -146,4 +154,13 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
 
   balance = balance - amount;
   setInnerText(balance);
+  const data = {
+    name: "Cash Out",
+    date: new Date().toLocaleTimeString(),
+  };
+  transactionsForm.push(data);
+  console.log(transactionsForm);
 });
+
+
+// Transactions Function
